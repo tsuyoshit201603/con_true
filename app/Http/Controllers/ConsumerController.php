@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ConsumerController extends Controller
 {
@@ -13,7 +14,7 @@ class ConsumerController extends Controller
      */
     public function index()
     {
-        //
+        return view('consumer.index');
     }
 
     /**
@@ -80,5 +81,18 @@ class ConsumerController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function loginView()
+    {
+        return view('consumer.auth');
+    }
+    
+    public function login(Request $request)
+    {
+        $email = $request->email;
+        $password = $request->password;
+        Auth::attempt(['email' => $email, 'password' => $password]);
+        return view('consumer.index');
     }
 }
