@@ -15,6 +15,11 @@ class CreateConsumersTable extends Migration
     {
         Schema::create('consumers', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->integer('user_id');
+            $table->integer('age');
+            $table->string('job');
+            $table->integer('phone_num');
+            $table->text('text')->nullable();
             $table->timestamps();
         });
     }
