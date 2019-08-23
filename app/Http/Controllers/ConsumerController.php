@@ -83,6 +83,11 @@ class ConsumerController extends Controller
         //
     }
 
+    public function signupView()
+    {
+        return view('consumer.signup');
+    }
+
     public function signup2View()
     {
         return view('consumer.signup_2');
