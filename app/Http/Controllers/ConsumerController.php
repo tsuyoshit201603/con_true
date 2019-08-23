@@ -83,25 +83,12 @@ class ConsumerController extends Controller
         //
     }
 
-    public function loginView()
+    public function signup2View()
     {
-        return view('consumer.login');
-    }
-    
-    public function login(Request $request)
-    {
-        $email = $request->email;
-        $password = $request->password;
-        Auth::attempt(['email' => $email, 'password' => $password]);
-        return view('consumer.index');
+        return view('consumer.signup_2');
     }
 
-    public function login2View()
-    {
-        return view('consumer.auth_2');
-    }
-
-    public function login2(Request $request)
+    public function signup2(Request $request)
     {
         $age = $request->age;
         $job = $request->job;

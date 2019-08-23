@@ -82,17 +82,4 @@ class BusinessController extends Controller
     {
         //
     }
-
-    public function loginView()
-    {
-        return view('business.login');
-    }
-    
-    public function login(Request $request)
-    {
-        $email = $request->email;
-        $password = $request->password;
-        Auth::attempt(['email' => $email, 'password' => $password]);
-        return view('business.index');
-    }
 }

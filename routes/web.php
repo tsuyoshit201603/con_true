@@ -21,15 +21,12 @@ Route::get('/', function() {
 
 // consumerルーティング
 Route::get('con', 'ConsumerController@index');
-Route::get('con/login', 'ConsumerController@loginView');
-Route::post('con/login', 'ConsumerController@login');
-Route::get('con/auth_2', 'ConsumerController@login2View');
-Route::post('con/auth_2', 'ConsumerController@login2');
+// consumer_signup
+Route::get('con/signup_2', 'ConsumerController@signup2View');
+Route::post('con/signup_2', 'ConsumerController@signup2');
 
 // businessルーティング
 Route::get('bus', 'BusinessController@index');
-Route::get('bus/login', 'BusinessController@loginView');
-Route::post('bus/login', 'BusinessController@login');
 
 // Auth導入時に追加されるルーティング
 Auth::routes();
