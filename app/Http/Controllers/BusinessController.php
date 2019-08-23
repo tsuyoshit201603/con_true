@@ -85,7 +85,7 @@ class BusinessController extends Controller
 
     public function loginView()
     {
-        return view('business.auth');
+        return view('business.login');
     }
     
     public function login(Request $request)

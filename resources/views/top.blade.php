@@ -10,6 +10,7 @@
 </head>
 <body>
   <h1>共通トップページ</h1>
-  <h2><a href="/con/auth">個人</a>|<a href="/bus/auth">法人</a></h2>
+  {{-- 自作のビューを作成 --}}
+  <h2><a href="/con/login">個人</a>|<a href="/bus/login">法人</a></h2>
 </body>
 </html>

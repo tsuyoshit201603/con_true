@@ -7,8 +7,8 @@
   <title>Document</title>
 </head>
 <body>
-  <h1>consumerログインページ</h1>
-  <form action="/con/auth" method="post">
+  <h1>buisnessログインページ</h1>
+  <form action="/bus/login" method="post">
     {{ csrf_field() }}
     <tr><th>mail: </th><td><input type="text" name="email"></td></tr>
     <tr><th>password: </th><td><input type="text" name="password"></td></tr>
