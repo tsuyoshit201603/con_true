@@ -26,6 +26,8 @@ Route::post('con/auth', 'ConsumerController@login');
 
 // businessルーティング
 Route::get('bus', 'BusinessController@index');
+Route::get('bus/auth', 'BusinessController@loginView');
+Route::post('bus/auth', 'BusinessController@login');
 
 // Auth導入時に追加されるルーティング
 Auth::routes();

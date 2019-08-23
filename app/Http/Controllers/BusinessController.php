@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class BusinessController extends Controller
 {
@@ -80,5 +81,18 @@ class BusinessController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function loginView()
+    {
+        return view('business.auth');
+    }
+    
+    public function login(Request $request)
+    {
+        $email = $request->email;
+        $password = $request->password;
+        Auth::attempt(['email' => $email, 'password' => $password]);
+        return view('business.index');
     }
 }

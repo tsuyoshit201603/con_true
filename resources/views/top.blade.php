@@ -10,6 +10,6 @@
 </head>
 <body>
   <h1>共通トップページ</h1>
-  <a href="/login">個人</a>|<a href="/login">法人</a>
+  <h2><a href="/con/auth">個人</a>|<a href="/bus/auth">法人</a></h2>
 </body>
 </html>
